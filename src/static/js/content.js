@@ -413,15 +413,15 @@ function fetchBlog(uin, idx, nextFunc) {
  */
 function constructBlog(title, postTime, markdown, blogInfo) {
     // 拼接标题，日期，内容
-    var result = "# " + title + "\n\n";
-    result = result + postTime + "\n\n";
-    result = result + markdown+ "\n\n\n";
+    var result = "# " + title + "\r\n\r\n";
+    result = result + postTime + "\r\n\r\n";
+    result = result + markdown.replace(/\n/g, "\r\n")+ "\r\n\r\n\r\n";
     // 拼接评论
-    result = result + "### 评论:\n\n";
+    result = result + "### 评论:\r\n\r\n";
     blogInfo.data.comments.forEach(function(entry){
-        var content = "* " + entry.poster.name + ": " + entry.content + "\n";
+        var content = "* " + entry.poster.name + ": " + entry.content + "\r\n";
         entry.replies.forEach(function(rep){
-            var c = "\t* " + rep.poster.name + ": " + rep.content + "\n";
+            var c = "\t* " + rep.poster.name + ": " + rep.content + "\r\n";
             content = content + c;
         });
         result = result+ content;
