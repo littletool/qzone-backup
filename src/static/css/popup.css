@@ -1,0 +1,13 @@
+/*
+ * popup.css
+ * Copyright (C) 2016 Hector Qiu
+ *
+ * Distributed under terms of the DO NOT SHARE license.
+ */
+
+body {
+    background: white;
+    color: black;
+    width: 300px;
+    height: 320px;
+}
