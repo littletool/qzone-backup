@@ -3,7 +3,7 @@
 
     "name": "QQ空间封印助手",
     "description": "导出QQ空间的日志为文件，供永久保存",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "icons": {
         "16": "static/img/icon-16.png",
         "48": "static/img/icon-48.png",
